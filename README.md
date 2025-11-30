@@ -1,74 +1,171 @@
+# 16-bit Multi-Cycle Processor Design
+
+### Digital Systems Design (DSD) — Spring 1404 (2025)
+
+### Instructor: **Dr. Amin Foshati**
+
 <div align="center">
   <img src="https://cdn.freebiesupply.com/logos/large/2x/sharif-logo-png-transparent.png" width="150" height="150" alt="Sharif University Logo">
-  <br><br>
-  <h1 align="center">16-bit Multi-Cycle Processor Design</h1>
-  <h2 align="center">Digital Systems Design (DSD) Course Project</h2>
-  <p align="center">
-    <b>Spring 1404 (2025)</b> | <b>Dr. Amin Foshati</b>
-  </p>
 </div>
 
 ---
 
-### 📖 Overview
+## 📖 Overview
 
-This repository hosts the complete Verilog implementation of a **16-bit Multi-Cycle Processor**. Unlike single-cycle architectures, this design breaks down instruction execution into multiple clock cycles, allowing for more complex arithmetic operations and efficient hardware reuse.
+This repository contains the full Verilog implementation of a **16-bit Multi-Cycle Processor**. Unlike single-cycle architectures, this processor divides each instruction into multiple clock cycles, reducing hardware cost and allowing complex arithmetic operations.
 
-The processor features a custom **Instruction Set Architecture (ISA)** supporting arithmetic, logical, and memory operations. The core highlight of this project is the hardware-level implementation of advanced algorithms for multiplication and division, rather than using standard Verilog operators (like `*` or `/`).
+This custom-designed processor features a tailored **Instruction Set Architecture (ISA)** supporting arithmetic, logic, and memory instructions. A key highlight of this design is the **hardware-level implementation of multiplication and division algorithms** rather than using built‑in Verilog operators.
 
 ---
 
-### 🧠 Technical Architecture & Modules
+## 🧠 Technical Architecture
 
-The design uses a modular approach, where the `Top.v` module integrates the **Control Unit** and the **Datapath**. Below is the detailed breakdown of the components:
+The processor architecture is modular. The `Top.v` file connects the **Control Unit** and **Datapath**.
 
-#### 1. Arithmetic Logic Unit (ALU)
-The ALU is the computational heart of the processor, designed to handle 16-bit signed integers (2's complement). It integrates three specialized sub-modules:
+### 1. Arithmetic Logic Unit (ALU)
 
-* **⚡ High-Speed Adder (Carry Select Adder):**
-    * **Module:** `CarrySelectAdder16.v`
-    * **Logic:** To overcome the propagation delay of standard Ripple Carry Adders, this module divides the 16-bit number into **4-bit blocks** (`RippleCarryAdder4.v`). It computes sum candidates for both `Cin=0` and `Cin=1` in parallel and selects the correct result using a multiplexer chain.
-    
-* **✖️ Optimized Multiplier (Karatsuba Algorithm):**
-    * **Module:** `KaratsubaMultiplier16.v`
-    * **Logic:** Instead of a naive $O(N^2)$ multiplication, this module uses the recursive **Karatsuba algorithm**. It splits the 16-bit inputs into Upper ($H$) and Lower ($L$) 8-bit halves.
-    * **Base Case:** The recursion bottoms out at 8-bits, handled by the `ShiftAddMultiplier8.v` module.
-    
-* **➗ Sequential Divider (Restoring Division):**
-    * **Module:** `RestoringDivider16.v`
-    * **Logic:** Implements the classic **Restoring Division** algorithm. It operates iteratively over **16 clock cycles**, shifting the remainder and subtracting the divisor to determine the quotient bits.
+The ALU handles 16‑bit signed (2's complement) arithmetic and includes three major modules:
 
-#### 2. Memory Organization
-* **Main Memory (`MainMemory.v`):** A unified architecture (Von Neumann style) where both Instructions and Data share the same address space. It is word-addressable with a depth of $2^{16}$ words.
-* **Register File (`RegisterFile.v`):** Contains 4 General-Purpose Registers (**R0-R3**). It supports **Dual-Read** (for fetching two operands simultaneously) and **Single-Write**.
+#### ⚡ High-Speed Adder — Carry Select Adder
 
-#### 3. Control Unit
+* **Module:** `CarrySelectAdder16.v`
+* The 16‑bit adder is divided into **4‑bit blocks** using `RippleCarryAdder4.v`.
+* Each block computes results for both `Cin = 0` and `Cin = 1`, and then selects the correct outputs.
+
+#### ✖️ Optimized Multiplier — Karatsuba Algorithm
+
+* **Module:** `KaratsubaMultiplier16.v`
+* Multiplies two 16‑bit numbers using a recursive **Karatsuba** approach.
+* Inputs are split into Upper (H) and Lower (L) 8‑bit halves.
+* The base case uses `ShiftAddMultiplier8.v` (Shift‑and‑Add method).
+
+#### ➗ Sequential Divider — Restoring Division
+
+* **Module:** `RestoringDivider16.v`
+* Implements the **Restoring Division** algorithm.
+* The division operates over **16 clock cycles**, determining quotient bits iteratively.
+
+---
+
+### 2. Memory Organization
+
+#### 🧱 Main Memory (`MainMemory.v`)
+
+* Shared Instruction + Data memory.
+* Word‑addressable: **2¹⁶ × 16‑bit** memory.
+
+#### 📦 Register File (`RegisterFile.v`)
+
+* Contains **4 General‑Purpose Registers (R0–R3)**.
+* Supports **dual‑read** and **single‑write** operations.
+
+---
+
+### 3. Control Unit
+
 * **Module:** `ControlUnit.v`
-* **Logic:** A Finite State Machine (FSM) that orchestrates the processor's stages: **Fetch ➞ Decode ➞ Execute ➞ Memory ➞ Write Back**. It generates specific signals to control the ALU operation, memory R/W, and register updates.
+* A multi‑state FSM controlling:
+
+  * ALU operations
+  * Register file writes
+  * Memory read/write
+  * State progression for multi‑cycle instructions
 
 ---
 
-### 📂 Project Structure
+## 📜 Instruction Set Architecture (ISA)
 
-The project files are organized as follows:
+The processor supports two instruction formats.
 
-```text
+---
+
+### **1. R‑Type (Arithmetic Instructions)**
+
+Used for register calculations. Results are stored in `rd`.
+
+| Opcode | Mnemonic | Function         | Algorithm            |
+| ------ | -------- | ---------------- | -------------------- |
+| `000`  | **ADD**  | `rd = rs1 + rs2` | Carry Select Adder   |
+| `001`  | **SUB**  | `rd = rs1 - rs2` | 2's complement + CSA |
+| `010`  | **MUL**  | `rd = rs1 * rs2` | Karatsuba            |
+| `011`  | **DIV**  | `rd = rs1 / rs2` | Restoring Division   |
+
+---
+
+### **2. M‑Type (Memory Instructions)**
+
+| Opcode | Mnemonic  | Function                                   |
+| ------ | --------- | ------------------------------------------ |
+| `100`  | **LOAD**  | `reg[rd] = Mem[reg[base] + SignExt(addr)]` |
+| `101`  | **STORE** | `Mem[reg[base] + SignExt(addr)] = reg[rd]` |
+
+---
+
+## 📂 Project Structure
+
+```
 .
-├── Top.v                     # [Top Module] Connects Control Unit and Datapath
-├── ControlUnit.v             # FSM Controller for the processor
-├── ALU.v                     # ALU Wrapper selecting Opcode operations
+├── Top.v                     # Main processor module
+├── ControlUnit.v             # FSM Controller
+├── ALU.v                     # ALU operation selector
 │
-├── [Arithmetic Modules]
-├── CarrySelectAdder16.v      # 16-bit CSA Adder
-├── RippleCarryAdder4.v       # 4-bit block for CSA
-├── FullAdder.v               # 1-bit Standard Adder
-├── KaratsubaMultiplier16.v   # 16-bit Karatsuba Multiplier
-├── ShiftAddMultiplier8.v     # 8-bit Multiplier (Base for Karatsuba)
-├── RestoringDivider16.v      # 16-bit Restoring Divider
+├── Arithmetic Modules
+│   ├── CarrySelectAdder16.v
+│   ├── RippleCarryAdder4.v
+│   ├── FullAdder.v
+│   ├── KaratsubaMultiplier16.v
+│   └── ShiftAddMultiplier8.v
+│   └── RestoringDivider16.v
 │
-├── [Storage Modules]
-├── RegisterFile.v            # Register File (R0-R3)
-├── Register.v                # D-FlipFlop Wrapper
-├── MainMemory.v              # RAM Module
+├── Storage Modules
+│   ├── RegisterFile.v
+│   ├── Register.v
+│   └── MainMemory.v
 │
-└── testbench.v               # Simulation Testbench
+└── testbench.v               # Simulation testbench
+```
+
+---
+
+## 🚀 Simulation Guide
+
+You can simulate this processor using **ModelSim**, **Vivado**, **Quartus**, or **Icarus Verilog**.
+
+### **Step 1 — Clone the Repository**
+
+```bash
+git clone https://github.com/YourUsername/16bit-Multicycle-Processor-Verilog.git
+cd 16bit-Multicycle-Processor-Verilog
+```
+
+### **Step 2 — Load Files**
+
+* Open your preferred Verilog simulator.
+* Create a new project.
+* Add **all `.v` files** to your project.
+
+### **Step 3 — Select Simulation Top**
+
+* Set **`testbench.v`** as the simulation top.
+* (Do *not* select `Top.v` — it needs clock/reset stimulus from the testbench.)
+
+### **Step 4 — Run Simulation**
+
+* Compile all modules.
+* Add the following signals to the waveform:
+
+  * `clk`, `rst`
+  * `Top_instance/PC`
+  * `Top_instance/ALU_out`
+  * `Top_instance/RegisterFile_instance/reg_array`
+
+### **Step 5 — Verify Outputs**
+
+* Multi‑cycle instructions use additional clock cycles.
+* For example, **DIV** will stall the FSM longer than **ADD**.
+
+---
+
+## 👨‍💻 Author
+
+**Erfan Teymouri**
