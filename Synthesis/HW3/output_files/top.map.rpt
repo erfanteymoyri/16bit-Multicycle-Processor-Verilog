@@ -1,0 +1,832 @@
+Analysis & Synthesis report for top
+Tue Jul 29 18:18:10 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |top|controller:ctrl|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Added for RAM Pass-Through Logic
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated
+ 17. Parameter Settings for Inferred Entity Instance: MainMemory:memory|altsyncram:memory_array_rtl_0
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1"
+ 20. Port Connectivity Checks: "ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2"
+ 21. Port Connectivity Checks: "ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0"
+ 22. Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder1"
+ 23. Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder0"
+ 24. Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[2].adder1"
+ 25. Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[2].adder0"
+ 26. Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[1].adder1"
+ 27. Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[1].adder0"
+ 28. Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder1"
+ 29. Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder0"
+ 30. Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder"
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jul 29 18:18:10 2025           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; top                                             ;
+; Top-level Entity Name              ; top                                             ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 1,079                                           ;
+;     Total combinational functions  ; 936                                             ;
+;     Dedicated logic registers      ; 489                                             ;
+; Total registers                    ; 489                                             ;
+; Total pins                         ; 19                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 1,048,576                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F484C6       ;                    ;
+; Top-level entity name                                                      ; top                ; top                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 20     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+; Codes/top.v                      ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/top.v                                   ;         ;
+; Codes/ShiftAddMultiplier8.v      ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/ShiftAddMultiplier8.v                   ;         ;
+; Codes/RippleCarryAdder4.v        ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/RippleCarryAdder4.v                     ;         ;
+; Codes/RestoringDivider16.v       ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/RestoringDivider16.v                    ;         ;
+; Codes/RegisterFile.v             ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/RegisterFile.v                          ;         ;
+; Codes/Register.v                 ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/Register.v                              ;         ;
+; Codes/MainMemory.v               ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/MainMemory.v                            ;         ;
+; Codes/KaratsubaMultiplier16.v    ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/KaratsubaMultiplier16.v                 ;         ;
+; Codes/FullAdder.v                ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/FullAdder.v                             ;         ;
+; Codes/ControlUnit.v              ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/ControlUnit.v                           ;         ;
+; Codes/CarrySelectAdder16.v       ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/CarrySelectAdder16.v                    ;         ;
+; Codes/ALU.v                      ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/HW3/Codes/ALU.v                                   ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/quartus_ejlali/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/quartus_ejlali/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/quartus_ejlali/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/quartus_ejlali/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; d:/quartus_ejlali/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/quartus_ejlali/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; d:/quartus_ejlali/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; d:/quartus_ejlali/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/quartus_ejlali/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_r4e1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/HW3/db/altsyncram_r4e1.tdf                        ;         ;
+; db/decode_ppa.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/HW3/db/decode_ppa.tdf                             ;         ;
+; db/mux_olb.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/HW3/db/mux_olb.tdf                                ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 1,079   ;
+;                                             ;         ;
+; Total combinational functions               ; 936     ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 457     ;
+;     -- 3 input functions                    ; 296     ;
+;     -- <=2 input functions                  ; 183     ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 731     ;
+;     -- arithmetic mode                      ; 205     ;
+;                                             ;         ;
+; Total registers                             ; 489     ;
+;     -- Dedicated logic registers            ; 489     ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 19      ;
+; Total memory bits                           ; 1048576 ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+; Maximum fan-out node                        ; clk     ;
+; Maximum fan-out                             ; 745     ;
+; Total fan-out                               ; 12084   ;
+; Average fan-out                             ; 7.11    ;
++---------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                   ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Library Name ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
+; |top                                              ; 936 (19)          ; 489 (0)      ; 1048576     ; 0            ; 0       ; 0         ; 19   ; 0            ; |top                                                                                                   ; work         ;
+;    |ALU:alu_inst|                                 ; 449 (89)          ; 254 (17)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst                                                                                      ; work         ;
+;       |CarrySelectAdder16:adder|                  ; 27 (9)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder                                                             ; work         ;
+;          |RippleCarryAdder4:csa_blocks[0].adder0| ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder0                      ; work         ;
+;             |FullAdder:FA0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder0|FullAdder:FA0        ; work         ;
+;             |FullAdder:FA1|                       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder0|FullAdder:FA1        ; work         ;
+;             |FullAdder:FA2|                       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder0|FullAdder:FA2        ; work         ;
+;             |FullAdder:FA3|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder0|FullAdder:FA3        ; work         ;
+;          |RippleCarryAdder4:csa_blocks[1].adder0| ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[1].adder0                      ; work         ;
+;             |FullAdder:FA1|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[1].adder0|FullAdder:FA1        ; work         ;
+;          |RippleCarryAdder4:csa_blocks[1].adder1| ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[1].adder1                      ; work         ;
+;             |FullAdder:FA1|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[1].adder1|FullAdder:FA1        ; work         ;
+;             |FullAdder:FA2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[1].adder1|FullAdder:FA2        ; work         ;
+;          |RippleCarryAdder4:csa_blocks[2].adder0| ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[2].adder0                      ; work         ;
+;             |FullAdder:FA1|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[2].adder0|FullAdder:FA1        ; work         ;
+;          |RippleCarryAdder4:csa_blocks[2].adder1| ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[2].adder1                      ; work         ;
+;             |FullAdder:FA1|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[2].adder1|FullAdder:FA1        ; work         ;
+;             |FullAdder:FA2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[2].adder1|FullAdder:FA2        ; work         ;
+;          |RippleCarryAdder4:csa_blocks[3].adder0| ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder0                      ; work         ;
+;             |FullAdder:FA1|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder0|FullAdder:FA1        ; work         ;
+;          |RippleCarryAdder4:csa_blocks[3].adder1| ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder1                      ; work         ;
+;             |FullAdder:FA1|                       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder1|FullAdder:FA1        ; work         ;
+;             |FullAdder:FA2|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder1|FullAdder:FA2        ; work         ;
+;             |FullAdder:FA3|                       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder1|FullAdder:FA3        ; work         ;
+;       |KaratsubaMultiplier16_Parallel:mul|        ; 163 (72)          ; 164 (47)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul                                                   ; work         ;
+;          |ShiftAddMultiplier8:mul_z0|             ; 40 (40)           ; 53 (53)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0                        ; work         ;
+;          |ShiftAddMultiplier8:mul_z1|             ; 26 (26)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1                        ; work         ;
+;          |ShiftAddMultiplier8:mul_z2|             ; 25 (25)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2                        ; work         ;
+;       |RestoringDivider16:divider|                ; 170 (170)         ; 73 (73)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ALU:alu_inst|RestoringDivider16:divider                                                           ; work         ;
+;    |MainMemory:memory|                            ; 245 (124)         ; 37 (33)      ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|MainMemory:memory                                                                                 ; work         ;
+;       |altsyncram:memory_array_rtl_0|             ; 121 (0)           ; 4 (0)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|MainMemory:memory|altsyncram:memory_array_rtl_0                                                   ; work         ;
+;          |altsyncram_r4e1:auto_generated|         ; 121 (4)           ; 4 (4)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated                    ; work         ;
+;             |decode_ppa:decode2|                  ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated|decode_ppa:decode2 ; work         ;
+;             |mux_olb:mux3|                        ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated|mux_olb:mux3       ; work         ;
+;    |RegisterFile:rf|                              ; 124 (100)         ; 100 (32)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|RegisterFile:rf                                                                                   ; work         ;
+;       |Register:reg0|                             ; 18 (18)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|RegisterFile:rf|Register:reg0                                                                     ; work         ;
+;       |Register:reg1|                             ; 2 (2)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|RegisterFile:rf|Register:reg1                                                                     ; work         ;
+;       |Register:reg2|                             ; 2 (2)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|RegisterFile:rf|Register:reg2                                                                     ; work         ;
+;       |Register:reg3|                             ; 2 (2)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|RegisterFile:rf|Register:reg3                                                                     ; work         ;
+;    |controller:ctrl|                              ; 99 (99)           ; 98 (98)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|controller:ctrl                                                                                   ; work         ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; Name                                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
++-------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 65536        ; 16           ; 65536        ; 16           ; 1048576 ; None ;
++-------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|controller:ctrl|state                                                                                                                                      ;
++-----------------+-----------------+-----------------+-------------+-------------+--------------+--------------+----------------+----------------+---------------+---------------+
+; Name            ; state.WRITEBK_2 ; state.WRITEBK_1 ; state.MEM_2 ; state.MEM_1 ; state.EXEC_2 ; state.EXEC_1 ; state.DECODE_2 ; state.DECODE_1 ; state.FETCH_2 ; state.FETCH_1 ;
++-----------------+-----------------+-----------------+-------------+-------------+--------------+--------------+----------------+----------------+---------------+---------------+
+; state.FETCH_1   ; 0               ; 0               ; 0           ; 0           ; 0            ; 0            ; 0              ; 0              ; 0             ; 0             ;
+; state.FETCH_2   ; 0               ; 0               ; 0           ; 0           ; 0            ; 0            ; 0              ; 0              ; 1             ; 1             ;
+; state.DECODE_1  ; 0               ; 0               ; 0           ; 0           ; 0            ; 0            ; 0              ; 1              ; 0             ; 1             ;
+; state.DECODE_2  ; 0               ; 0               ; 0           ; 0           ; 0            ; 0            ; 1              ; 0              ; 0             ; 1             ;
+; state.EXEC_1    ; 0               ; 0               ; 0           ; 0           ; 0            ; 1            ; 0              ; 0              ; 0             ; 1             ;
+; state.EXEC_2    ; 0               ; 0               ; 0           ; 0           ; 1            ; 0            ; 0              ; 0              ; 0             ; 1             ;
+; state.MEM_1     ; 0               ; 0               ; 0           ; 1           ; 0            ; 0            ; 0              ; 0              ; 0             ; 1             ;
+; state.MEM_2     ; 0               ; 0               ; 1           ; 0           ; 0            ; 0            ; 0              ; 0              ; 0             ; 1             ;
+; state.WRITEBK_1 ; 0               ; 1               ; 0           ; 0           ; 0            ; 0            ; 0              ; 0              ; 0             ; 1             ;
+; state.WRITEBK_2 ; 1               ; 0               ; 0           ; 0           ; 0            ; 0            ; 0              ; 0              ; 0             ; 1             ;
++-----------------+-----------------+-----------------+-------------+-------------+--------------+--------------+----------------+----------------+---------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                               ;
++------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+; Register name                                                                                  ; Reason for Removal                                                                              ;
++------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+; controller:ctrl|alu_op[2]                                                                      ; Stuck at GND due to stuck port data_in                                                          ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|result[8..15]       ; Lost fanout                                                                                     ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|result[8..15]       ; Lost fanout                                                                                     ;
+; controller:ctrl|sign_extended[8,9,11..15]                                                      ; Merged with controller:ctrl|sign_extended[10]                                                   ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|active              ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|active   ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|active              ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|active   ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|count[3]            ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|count[3] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|count[3]            ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|count[3] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|count[2]            ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|count[2] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|count[2]            ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|count[2] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|count[1]            ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|count[1] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|count[1]            ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|count[1] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|count[0]            ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|count[0] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|count[0]            ; Merged with ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|count[0] ;
+; MainMemory:memory|memory_array_rtl_0_bypass[2]                                                 ; Merged with controller:ctrl|mem_addr[0]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[4]                                                 ; Merged with controller:ctrl|mem_addr[1]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[6]                                                 ; Merged with controller:ctrl|mem_addr[2]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[8]                                                 ; Merged with controller:ctrl|mem_addr[3]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[10]                                                ; Merged with controller:ctrl|mem_addr[4]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[12]                                                ; Merged with controller:ctrl|mem_addr[5]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[14]                                                ; Merged with controller:ctrl|mem_addr[6]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[16]                                                ; Merged with controller:ctrl|mem_addr[7]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[18]                                                ; Merged with controller:ctrl|mem_addr[8]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[20]                                                ; Merged with controller:ctrl|mem_addr[9]                                                         ;
+; MainMemory:memory|memory_array_rtl_0_bypass[22]                                                ; Merged with controller:ctrl|mem_addr[10]                                                        ;
+; MainMemory:memory|memory_array_rtl_0_bypass[24]                                                ; Merged with controller:ctrl|mem_addr[11]                                                        ;
+; MainMemory:memory|memory_array_rtl_0_bypass[26]                                                ; Merged with controller:ctrl|mem_addr[12]                                                        ;
+; MainMemory:memory|memory_array_rtl_0_bypass[28]                                                ; Merged with controller:ctrl|mem_addr[13]                                                        ;
+; MainMemory:memory|memory_array_rtl_0_bypass[30]                                                ; Merged with controller:ctrl|mem_addr[14]                                                        ;
+; MainMemory:memory|memory_array_rtl_0_bypass[32]                                                ; Merged with controller:ctrl|mem_addr[15]                                                        ;
+; controller:ctrl|state~12                                                                       ; Lost fanout                                                                                     ;
+; controller:ctrl|state~13                                                                       ; Lost fanout                                                                                     ;
+; controller:ctrl|state~14                                                                       ; Lost fanout                                                                                     ;
+; controller:ctrl|state~15                                                                       ; Lost fanout                                                                                     ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[8..15]  ; Lost fanout                                                                                     ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[8..15]  ; Lost fanout                                                                                     ;
+; MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated|addr_store_b[0] ; Merged with controller:ctrl|mem_addr[12]                                                        ;
+; MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated|addr_store_b[1] ; Merged with controller:ctrl|mem_addr[13]                                                        ;
+; MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated|addr_store_b[2] ; Merged with controller:ctrl|mem_addr[14]                                                        ;
+; MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated|addr_store_b[3] ; Merged with controller:ctrl|mem_addr[15]                                                        ;
+; Total Number of Removed Registers = 74                                                         ;                                                                                                 ;
++------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                             ;
++---------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------+
+; Register name                                                                         ; Reason for Removal ; Registers Removed due to This Register                                                     ;
++---------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------+
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|result[15] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[15] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|result[14] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[14] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|result[13] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[13] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|result[12] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[12] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|result[11] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[11] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|result[10] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[10] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|result[9]  ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[9]  ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|result[8]  ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[8]  ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|result[15] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[15] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|result[14] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[14] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|result[13] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[13] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|result[12] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[12] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|result[11] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[11] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|result[10] ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[10] ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|result[9]  ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[9]  ;
+; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|result[8]  ; Lost Fanouts       ; ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[8]  ;
++---------------------------------------------------------------------------------------+--------------------+--------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 489   ;
+; Number of registers using Synchronous Clear  ; 46    ;
+; Number of registers using Synchronous Load   ; 82    ;
+; Number of registers using Asynchronous Clear ; 257   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 386   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; controller:ctrl|mem_read               ; 17      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Added for RAM Pass-Through Logic                                             ;
++-------------------------------------------------+--------------------------------------+
+; Register Name                                   ; RAM Name                             ;
++-------------------------------------------------+--------------------------------------+
+; MainMemory:memory|memory_array_rtl_0_bypass[0]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[1]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[2]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[3]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[4]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[5]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[6]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[7]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[8]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[9]  ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[10] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[11] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[12] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[13] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[14] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[15] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[16] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[17] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[18] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[19] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[20] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[21] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[22] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[23] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[24] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[25] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[26] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[27] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[28] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[29] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[30] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[31] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[32] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[33] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[34] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[35] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[36] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[37] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[38] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[39] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[40] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[41] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[42] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[43] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[44] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[45] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[46] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[47] ; MainMemory:memory|memory_array_rtl_0 ;
+; MainMemory:memory|memory_array_rtl_0_bypass[48] ; MainMemory:memory|memory_array_rtl_0 ;
++-------------------------------------------------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|RegisterFile:rf|Register:reg1|data_out[13]                                                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|RegisterFile:rf|Register:reg2|data_out[11]                                                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|RegisterFile:rf|Register:reg3|data_out[4]                                                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|RegisterFile:rf|Register:reg0|data_out[2]                                                  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|multiplicand[0] ;
+; 3:1                ; 42 bits   ; 84 LEs        ; 42 LEs               ; 42 LEs                 ; Yes        ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|multiplicand[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|wait_cycles[1]                             ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |top|RegisterFile:rf|read_data2[15]                                                             ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |top|RegisterFile:rf|read_data1[3]                                                              ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top|ALU:alu_inst|RestoringDivider16:divider|A_Q[23]                                            ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0|accumulator[1]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1|accumulator[14] ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2|accumulator[6]  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 16 LEs               ; 64 LEs                 ; Yes        ; |top|controller:ctrl|rf_write_data[13]                                                          ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|ALU:alu_inst|RestoringDivider16:divider|count[1]                                           ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |top|ALU:alu_inst|result[12]                                                                    ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|ALU:alu_inst|result[5]                                                                     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|ALU:alu_inst|result[11]                                                                    ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|ALU:alu_inst|result[14]                                                                    ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |top|ALU:alu_inst|RestoringDivider16:divider|A_Q                                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|MainMemory:memory|data_out[6]                                                              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |top|ALU:alu_inst|RestoringDivider16:divider|A_Q                                                ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; No         ; |top|controller:ctrl|Selector14                                                                 ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; No         ; |top|controller:ctrl|Selector26                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for MainMemory:memory|altsyncram:memory_array_rtl_0|altsyncram_r4e1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MainMemory:memory|altsyncram:memory_array_rtl_0 ;
++------------------------------------+----------------------+--------------------------------------+
+; Parameter Name                     ; Value                ; Type                                 ;
++------------------------------------+----------------------+--------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                              ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                              ;
+; WIDTH_A                            ; 16                   ; Untyped                              ;
+; WIDTHAD_A                          ; 16                   ; Untyped                              ;
+; NUMWORDS_A                         ; 65536                ; Untyped                              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                              ;
+; WIDTH_B                            ; 16                   ; Untyped                              ;
+; WIDTHAD_B                          ; 16                   ; Untyped                              ;
+; NUMWORDS_B                         ; 65536                ; Untyped                              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                              ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                              ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                              ;
+; BYTE_SIZE                          ; 8                    ; Untyped                              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
+; INIT_FILE                          ; UNUSED               ; Untyped                              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                              ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                              ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                              ;
+; CBXI_PARAMETER                     ; altsyncram_r4e1      ; Untyped                              ;
++------------------------------------+----------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                            ;
++-------------------------------------------+-------------------------------------------------+
+; Name                                      ; Value                                           ;
++-------------------------------------------+-------------------------------------------------+
+; Number of entity instances                ; 1                                               ;
+; Entity Instance                           ; MainMemory:memory|altsyncram:memory_array_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                       ;
+;     -- WIDTH_A                            ; 16                                              ;
+;     -- NUMWORDS_A                         ; 65536                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                    ;
+;     -- WIDTH_B                            ; 16                                              ;
+;     -- NUMWORDS_B                         ; 65536                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                       ;
++-------------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z1"         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z2"         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0"         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder1" ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                        ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                                                   ;
++------+-------+----------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[3].adder0" ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                        ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                                   ;
++------+-------+----------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[2].adder1" ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                        ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                                                   ;
++------+-------+----------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[2].adder0" ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                        ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                                   ;
++------+-------+----------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[1].adder1" ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                        ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                                                   ;
++------+-------+----------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[1].adder0" ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                        ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                                   ;
++------+-------+----------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder1" ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                        ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                                                   ;
++------+-------+----------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder0" ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                        ;
++------+-------+----------+--------------------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                                   ;
++------+-------+----------+--------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu_inst|CarrySelectAdder16:adder"                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jul 29 18:18:06 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file codes/top.v
+    Info (12023): Found entity 1: top
+Info (12021): Found 1 design units, including 1 entities, in source file codes/testbench.v
+    Info (12023): Found entity 1: Processor_TB
+Info (12021): Found 1 design units, including 1 entities, in source file codes/shiftaddmultiplier8.v
+    Info (12023): Found entity 1: ShiftAddMultiplier8
+Info (12021): Found 1 design units, including 1 entities, in source file codes/ripplecarryadder4.v
+    Info (12023): Found entity 1: RippleCarryAdder4
+Info (12021): Found 1 design units, including 1 entities, in source file codes/restoringdivider16.v
+    Info (12023): Found entity 1: RestoringDivider16
+Info (12021): Found 1 design units, including 1 entities, in source file codes/registerfile.v
+    Info (12023): Found entity 1: RegisterFile
+Info (12021): Found 1 design units, including 1 entities, in source file codes/register.v
+    Info (12023): Found entity 1: Register
+Info (12021): Found 1 design units, including 1 entities, in source file codes/mainmemory.v
+    Info (12023): Found entity 1: MainMemory
+Info (12021): Found 1 design units, including 1 entities, in source file codes/karatsubamultiplier16.v
+    Info (12023): Found entity 1: KaratsubaMultiplier16_Parallel
+Info (12021): Found 1 design units, including 1 entities, in source file codes/fulladder.v
+    Info (12023): Found entity 1: FullAdder
+Info (12021): Found 1 design units, including 1 entities, in source file codes/controlunit.v
+    Info (12023): Found entity 1: controller
+Info (12021): Found 1 design units, including 1 entities, in source file codes/carryselectadder16.v
+    Info (12023): Found entity 1: CarrySelectAdder16
+Info (12021): Found 1 design units, including 1 entities, in source file codes/alu.v
+    Info (12023): Found entity 1: ALU
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "MainMemory" for hierarchy "MainMemory:memory"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_inst"
+Info (12128): Elaborating entity "CarrySelectAdder16" for hierarchy "ALU:alu_inst|CarrySelectAdder16:adder"
+Info (12128): Elaborating entity "RippleCarryAdder4" for hierarchy "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder0"
+Info (12128): Elaborating entity "FullAdder" for hierarchy "ALU:alu_inst|CarrySelectAdder16:adder|RippleCarryAdder4:csa_blocks[0].adder0|FullAdder:FA0"
+Info (12128): Elaborating entity "KaratsubaMultiplier16_Parallel" for hierarchy "ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul"
+Info (12128): Elaborating entity "ShiftAddMultiplier8" for hierarchy "ALU:alu_inst|KaratsubaMultiplier16_Parallel:mul|ShiftAddMultiplier8:mul_z0"
+Info (12128): Elaborating entity "RestoringDivider16" for hierarchy "ALU:alu_inst|RestoringDivider16:divider"
+Warning (10036): Verilog HDL or VHDL warning at RestoringDivider16.v(15): object "abs_dividend" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at RestoringDivider16.v(15): object "abs_divisor" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at RestoringDivider16.v(35): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at RestoringDivider16.v(36): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at RestoringDivider16.v(38): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at RestoringDivider16.v(39): truncated value with size 48 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at RestoringDivider16.v(55): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at RestoringDivider16.v(58): truncated value with size 32 to match size of target (5)
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:rf"
+Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:rf|Register:reg0"
+Info (12128): Elaborating entity "controller" for hierarchy "controller:ctrl"
+Warning (276020): Inferred RAM node "MainMemory:memory|memory_array_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "MainMemory:memory|memory_array_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 16
+        Info (286033): Parameter NUMWORDS_A set to 65536
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 16
+        Info (286033): Parameter NUMWORDS_B set to 65536
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "MainMemory:memory|altsyncram:memory_array_rtl_0"
+Info (12133): Instantiated megafunction "MainMemory:memory|altsyncram:memory_array_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "16"
+    Info (12134): Parameter "NUMWORDS_A" = "65536"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "16"
+    Info (12134): Parameter "NUMWORDS_B" = "65536"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r4e1.tdf
+    Info (12023): Found entity 1: altsyncram_r4e1
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_ppa.tdf
+    Info (12023): Found entity 1: decode_ppa
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_olb.tdf
+    Info (12023): Found entity 1: mux_olb
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (17049): 36 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/User/Desktop/HW3/output_files/top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1427 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 1152 logic cells
+    Info (21064): Implemented 256 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Tue Jul 29 18:18:10 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/User/Desktop/HW3/output_files/top.map.smsg.
+
+

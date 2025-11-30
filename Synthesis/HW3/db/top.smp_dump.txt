@@ -1,0 +1,13 @@
+
+State Machine - |top|controller:ctrl|state
+Name state.WRITEBK_2 state.WRITEBK_1 state.MEM_2 state.MEM_1 state.EXEC_2 state.EXEC_1 state.DECODE_2 state.DECODE_1 state.FETCH_2 state.FETCH_1 
+state.FETCH_1 0 0 0 0 0 0 0 0 0 0 
+state.FETCH_2 0 0 0 0 0 0 0 0 1 1 
+state.DECODE_1 0 0 0 0 0 0 0 1 0 1 
+state.DECODE_2 0 0 0 0 0 0 1 0 0 1 
+state.EXEC_1 0 0 0 0 0 1 0 0 0 1 
+state.EXEC_2 0 0 0 0 1 0 0 0 0 1 
+state.MEM_1 0 0 0 1 0 0 0 0 0 1 
+state.MEM_2 0 0 1 0 0 0 0 0 0 1 
+state.WRITEBK_1 0 1 0 0 0 0 0 0 0 1 
+state.WRITEBK_2 1 0 0 0 0 0 0 0 0 1 

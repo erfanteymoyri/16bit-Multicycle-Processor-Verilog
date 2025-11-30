@@ -1,0 +1,1512 @@
+# Register x0:      x
+# Register x1:      x
+# Register x2:      x
+# Register x3:      x
+# memory[16]:      x
+# memory[17]:      x
+# memory[18]:      x
+# memory[19]:      x
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:      0
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     0
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      0
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     1
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:      0
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     2
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     3
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     3
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     3
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     3
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     3
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     3
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     3
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      0
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     3
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:     13
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     4
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -4
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     5
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     6
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     6
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     6
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     6
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     6
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     6
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     6
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:      6
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     6
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -10
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     7
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     8
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     8
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     8
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     8
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     8
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     8
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     8
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     15
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     8
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:     -9
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:     9
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:      6
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    10
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    11
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    11
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    11
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    11
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    11
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    11
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    11
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    11
+# ---------------------------------------------
+# Register x0:   -104
+# Register x1:     30
+# Register x2:    -52
+# Register x3:      2
+# memory[16]:     -4
+# memory[17]:   -104
+# memory[18]:     13
+# memory[19]:    -52
+# pc:    11
+# ---------------------------------------------
+# ** Note: $stop    : C:/Users/erfan/OneDrive/Desktop/DSD_project/src/testbench.v(47)
+#    Time: 1510 ns  Iteration: 0  Instance: /Processor_TB
