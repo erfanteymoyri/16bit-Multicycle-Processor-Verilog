@@ -134,7 +134,7 @@ You can simulate this processor using **ModelSim**, **Vivado**, **Quartus**, or 
 ### **Step 1 — Clone the Repository**
 
 ```bash
-git clone https://github.com/YourUsername/16bit-Multicycle-Processor-Verilog.git
+git clone https://github.com/erfanteymoyri/16bit-Multicycle-Processor-Verilog.git
 cd 16bit-Multicycle-Processor-Verilog
 ```
 
