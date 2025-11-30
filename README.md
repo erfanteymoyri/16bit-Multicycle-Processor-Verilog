@@ -1,11 +1,11 @@
-# 16-bit Multi-Cycle Processor Design
-
-### Digital Systems Design (DSD) — Spring 1404 (2025)
-
-### Instructor: **Dr. Amin Foshati**
-
 <div align="center">
   <img src="https://cdn.freebiesupply.com/logos/large/2x/sharif-logo-png-transparent.png" width="150" height="150" alt="Sharif University Logo">
+  <br><br>
+  <h1 align="center">16-bit Multi-Cycle Processor Design</h1>
+  <h2 align="center">Digital Systems Design (DSD) Course Project</h2>
+  <p align="center">
+    <b>Spring 1404 (2025)</b> | <b>Dr. Amin Foshati</b>
+  </p>
 </div>
 
 ---
